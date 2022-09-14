@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <table>
+      <tr>
+        <th>Sr. No.</th>
+        <th>Book Name</th>
+        <th>Quantity</th>
+      </tr>
+      <tbody id="pro">
+
+
+      </tbody>
+    </table>
+    <script>
+        let prodata ;
+        let prodata1 ;
+        for(i=0;i<prodata.length;i++){
+        let pro = document.getElementById("pro");
+        let row = document.createElement("tr");
+        let ele1 = document.createElement('td');
+        let ele2 = document.createElement('td');
+        let ele3 = document.createElement('td');
+
+        ele1.innerHTML = [i]+1;
+        ele2.innerHTML = prodata[i];
+        ele3.innerHTML = prodata1[i];
+
+        row.appendChild(ele1);
+        row.appendChild(ele2);
+        row.appendChild(ele3);
+        pro.appendChild(row);
+        }
+    </script>
+</body>
+</html>

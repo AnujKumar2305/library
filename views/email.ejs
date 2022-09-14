@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body style="background-color: #093131e3; width: 100%; min-height: 60vh;" >
+    
+    <h1 style="color:#f3711d; text-align: center; margin: auto;">LIBRARY SCIENTIA</h1>
+    <h2  style="color:#f3711d; margin-left: 20px;">Order Summery</h2>
+    <table style="border:1px solid #797979cb; width: 95%; margin: auto; border-collapse: collapse;">
+      <tr>
+        <th style="background-color:#181717e7; color:#ffffff">Sr. No.</th>
+        <th   style="background-color:#181717e7; color:#ffffff">Book Name</th>
+        <th  style="background-color:#181717e7; color:#ffffff">Quantity</th>
+        <th  style="background-color:#181717e7; color:#ffffff">Price</th>
+      </tr>
+      <tbody id="pro">
+        <% for(i=0 ; i < items.length ;i++ ){ %>
+            <tr>
+                <td  style="background-color:#5a5a5ad5; color:#ffffff;text-align: center;"> <%= i+1 %></td>
+                <td  style="background-color:#5a5a5ad5; color:#ffffff"><%= items[i].title %></td>
+                <td style="background-color:#5a5a5ad5; color:#ffffff; text-align: center;"><%= qty[i] %></td>
+                <td style="background-color:#5a5a5ad5; color:#ffffff;text-align: center;"><%= items[i].price %></td>
+            </tr>
+        <% } %>
+            <tr>
+                <td style="background-color:#0a0909fa; color:#ffffff;text-align: center;" colspan="3">SubTotal</td>
+                <td style="background-color:#050505ee; color:#ffffff;text-align: center;">$ <%= total %></td>
+            </tr>
+      </tbody>
+    </table>
+    <!-- <script>
+        let prodata ;
+        let prodata1 ;
+        for(i=0;i<prodata.length;i++){
+        let pro = document.getElementById("pro");
+        let row = document.createElement("tr");
+        let ele1 = document.createElement('td');
+        let ele2 = document.createElement('td');
+        let ele3 = document.createElement('td');
+
+        ele1.innerHTML = [i]+1;
+        ele2.innerHTML = prodata[i];
+        ele3.innerHTML = prodata1[i];
+
+        row.appendChild(ele1);
+        row.appendChild(ele2);
+        row.appendChild(ele3);
+        pro.appendChild(row);
+        }
+    </script> -->
+</body>
+</html>
